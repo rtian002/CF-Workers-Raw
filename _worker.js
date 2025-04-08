@@ -17,10 +17,10 @@ export default {
 				githubRawUrl += url.pathname;
 			}
 			//console.log(githubRawUrl);
-			if (env.GH_TOKEN && env.TOKEN){
-				if (env.TOKEN == url.searchParams.get('token')) token = env.GH_TOKEN || token;
+			if (env.GH_TOKEN_app && env.TOKEN){
+				if (env.TOKEN == url.searchParams.get('token')) token = env.GH_TOKEN_app || token;
 				else token = url.searchParams.get('token') || token;
-			} else token = url.searchParams.get('token') || env.GH_TOKEN || env.TOKEN || token;
+			} else token = url.searchParams.get('token') || env.GH_TOKEN_app || env.TOKEN || token;
 			
 			const githubToken = token;
 			//console.log(githubToken);
